@@ -17,16 +17,6 @@ class SendResponse extends Model
         ]);
     }
 
-    // public static function __callStatic($name, $arguments)
-    // {
-    //     if ($name == 'DatabaseError') {
-    //         return self::errorResponse(5, 'sql error');
-    //     } else if ($name == 'ParamError') {
-    //         $result = implode(' , ', $arguments[0]);
-    //         return self::errorResponse(27, $result . ' has wrong data');
-    //     }
-    // }
-
     public static function errorResponse($error_code, $result)
     {
         return response()->json([
